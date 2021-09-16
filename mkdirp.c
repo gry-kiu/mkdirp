@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 
 void mkdirp(const char *data_path) {
   char path[PATH_MAX];
-  for (int i = 0; i < strlen(data_path); i++) {
+  for (size_t i = 0; i < strlen(data_path); i++) {
     path[i] = data_path[i];
     if (path[i] == '/') {
       mkdir(path, S_IRWXU);
